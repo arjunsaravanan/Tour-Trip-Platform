@@ -1,0 +1,227 @@
+<?php 
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+	$user_data = check_login($con);
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" comntent="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>NP TRIP</title>
+</head>
+
+<body>
+
+    <body>
+
+        
+        <section class="nav-bar">
+            <div class="logo">ASV Trip</div>
+            
+            <ul class="menu">
+                <li><a href="process_booking.php">book</a></li>
+                <li><a href="personal_details.php">personal details</a></li>
+                <li><a href="process_contact.php">contact us</a></li>
+                <li><a href="rating.php">rating</a></li>
+               
+            </ul>
+            </div>
+
+        </section>
+        
+        <section class="banner">
+            <div class="banner-text-item">
+                <div class="banner-heading">
+                    <h1>Welcome To Trip!</h1>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="service-item">
+                <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293634/tour-guide_onzla9.png">
+                <h2>1000+ Our Local Guides</h2>
+            </div>
+            <div class="service-item">
+                <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293738/reliability_jbpn4g.png">
+                <h2>100% Trusted Tour Agency</h2>
+            </div>
+            <div class="service-item">
+                <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293635/experience_a3fduk.png">
+                <h2>15+ Years of Travel Experience</h2>
+            </div>
+            <div class="service-item">
+                <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293634/feedback_s8z7d9.png">
+                <h2>98% Our Travelers are Happy</h2>
+            </div>
+        </section>
+        
+        <section class="places">
+            <div class="places-text">
+                
+                <h2>Iconic Places</h2>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img
+                                src="https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=400">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐</span>
+                        <h2>The Taj Mahal</h2>
+                        <p class="cost">10000.Rs / Per Person</p>
+                        <div class="card-box">
+                            <p class="time">🕓 2 Nights</p>
+                            <p class="location">✈ Delhi, Agra</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293755/paris_uj8wum.jpg">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Eiffel Tower</h2>
+                        <p class="cost">20000.Rs / Per Person</p>
+                        <div class="card-box">
+                            <p class="time">🕓 3 Nights</p>
+                            <p class="location">✈ Paris, Lyon</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="https://media.istockphoto.com/id/1194899511/photo/colosseum-in-rome-without-people-in-the-morning-italy.jpg?b=1&s=170667a&w=0&k=20&c=f6zUZEzhtIAoM0vNiAhv8LuAhmotXKFMXDG66sspXJU=">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Colosseum</h2>
+                        <p class="cost">30000.Rs / Per Person</p>
+                        <div class="card-box">
+                            <p class="time">🕓 3 Nights</p>
+                            <p class="location">✈ Rome, Italy</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img
+                                src="https://media.istockphoto.com/id/177047347/photo/the-pyramids-of-giza.jpg?b=1&s=170667a&w=0&k=20&c=9vz5qxFUC_70oWYeYZAEmi5AXy2N3MoXHyxOjOzZAck=">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>The Pyramid Of Giza</h2>
+                        <p class="cost">50000.Rs / Per Person</p>
+                        <div class="card-box">
+                            <p class="time">🕓 4 Nights</p>
+                            <p class="location">✈ Cairo, River Nile</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img src="https://media.istockphoto.com/id/1366637998/photo/leaning-tower-of-pisa.jpg?b=1&s=170667a&w=0&k=20&c=_xoE399Gon-aRgJ1IPMThYV4LL2SDt7EfZVGUYU8zPU=">
+                        </div>
+                    </div>
+                   
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>Leaning Tower Of Pisa</h2>
+                        <p class="cost">60000.Rs / Per Person</p>
+                        <div class="card-box">
+                            <p class="time">🕓 2 Nights</p>
+                            <p class="location">✈ Pisa, Italy</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <img
+                                src="https://media.istockphoto.com/id/902771120/photo/great-wall-of-china-at-the-jinshanling-section-sunset-landscape.jpg?b=1&s=170667a&w=0&k=20&c=X-n3-dOHdBKgLHChy5H-yojU-uhPVKIS0b_H-kB8UtU=">
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2>The Great Wall Of China</h2>
+                        <p class="cost">40000.Rs / Per Person</p>
+                        <div class="card-box">
+                            <p class="time">🕓 3 Nights</p>
+                            <p class="location">✈ Huairou, China</p>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="card">
+                        <div class="zoom-img">
+                            <div class="img-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1555109307-f7d9da25c244?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZW1waXJlJTIwc3RhdGUlMjBidWlsZGluZ3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80 ">
+                            </div>
+                        </div>
+    
+                        <div class="text">
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                            <h2>The Empire State Building</h2>
+                            <p class="cost">40000.Rs / Per Person</p>
+                            <div class="card-box">
+                                <p class="time">🕓 3 Nights</p>
+                                <p class="location">✈ New York, USA</p>
+                            </div>
+                        </div>
+                    
+            </div>
+        </section>
+
+        
+        
+        
+        <div class="footer">
+            <div class="links">
+                <h1>THANK YOU!</h1>
+                
+            </div>
+        </div>
+    </body>
+
+</html>
+</body>
+
+</html>
+
+
+
